@@ -335,7 +335,8 @@ class LazyLoad extends Component {
       placeholder,
       className,
       classNamePrefix,
-      style
+      style,
+      width
     } = this.props;
 
     return (
@@ -346,7 +347,7 @@ class LazyLoad extends Component {
           placeholder
         ) : (
           <div
-            style={{ height: height }}
+            style={{ height: height, width: width }}
             className={`${classNamePrefix}-placeholder`}
           />
         )}
@@ -373,7 +374,8 @@ LazyLoad.propTypes = {
   placeholder: PropTypes.node,
   scrollContainer: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   unmountIfInvisible: PropTypes.bool,
-  style: PropTypes.object
+  style: PropTypes.object,
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
 };
 
 LazyLoad.defaultProps = {

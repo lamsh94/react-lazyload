@@ -40,7 +40,7 @@ export default class HorizontallScroll extends Component {
         <div className="widget-list horizontal">
           {this.state.arr.map((el, index) => {
             return (
-              <LazyLoad once={el.once} key={index} overflow throttle={100} height={200} offset={500}>
+              <LazyLoad once={el.once} key={index} overflow throttle={100} height={200} offset={500} width={500}>
                 <Widget once={el.once} id={el.uniqueId} count={ index + 1 } />
               </LazyLoad>
             );
